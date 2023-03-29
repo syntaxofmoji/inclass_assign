@@ -6,20 +6,19 @@ import Sidebar from "./components/Sidebar";
 import { Container, Box, Grid } from "@mui/material";
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <Box>
       <Nav />
-      <Container sx={{mt:10}}>
-      <Grid container direction="row" justifycontent ="center" spacing={3} paddingTop={3}>
-          <Grid item xs={3}>
+      <Container>
+      <Grid container spacing={3} paddingTop={3}>
+          <Grid item md={3}>
             <Sidebar />
           </Grid>
-          <Grid item xs={6}> 
+          <Grid item md={6}> 
             <Content />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item md={3}>
             <Rightbar />
           </Grid>
         </Grid>
