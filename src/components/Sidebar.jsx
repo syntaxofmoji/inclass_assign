@@ -15,8 +15,8 @@ import AccountBoxIcon from '@mui/icons-material/AccountBox';
 
 export default function Sidebar() {
   return (
-    <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-      <nav aria-label="main mailbox folders">
+    <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper',display:{xs: "none", md: "block" }}}>
+      <Box display={"flex"} justifyContent={"flex-end"}>
         <List>
           <ListItem disablePadding>
             <ListItemButton>
@@ -76,7 +76,7 @@ export default function Sidebar() {
           </ListItem>
         </List>
         
-      </nav>
-    </Box>
+      </Box>
+   </Box>
   );
 }

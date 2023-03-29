@@ -12,7 +12,7 @@ function App() {
     <Box>
       <Nav />
       <Container sx={{mt:10}}>
-        <Grid container direction="row" justifycontent ="center" gap={3}>
+      <Grid container direction="row" justifycontent ="center" spacing={3} paddingTop={3}>
           <Grid item xs={3}>
             <Sidebar />
           </Grid>

@@ -1,47 +1,51 @@
 import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import { Typography, Box } from '@mui/material';
+import { Typography, Grid, Box } from '@mui/material';
+import { Height } from '@mui/icons-material';
 
 export default function Rightbar() {
   return (
-    <Box>
+    <Box direction={"column"} sx={{ display: { xs: "none", md: "block" } }}>
+      <Box display={"flex"} flexDirection={"column"} mt={2} >
         <Typography>
-            Latest Photos
+        Latest Photos
+             <br />
+            ૮ ºﻌºა
         </Typography>
-  
-    <ImageList sx={{ width: 250 }} cols={2} >
-      {itemData.map((item) => (
-        <ImageListItem key={item.img}>
-          <img
-            src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-            srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-            alt={item.title}
-            loading="lazy"
-          />
-        </ImageListItem>
-      ))}
-    </ImageList>
+        <ImageList sx={{ width: 250, height: 250 }} cols={2}>
+          {itemData.map((item) => (
+            <ImageListItem key={item.img}>
+              <img
+                src={`${item.img}?w=250&h=250&fit=crop&auto=format`}
+                srcSet={`${item.img}?w=250&h=250&fit=crop&auto=format&dpr=2 2x`}
+                alt={item.title}
+                loading="lazy"
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
+      </Box>
     </Box>
   );
 }
 
 const itemData = [
   {
-    img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-    title: 'Breakfast',
+    img: 'https://www.wikihow.com/images/thumb/f/fe/Make-Your-Nintendogs-Love-You-Step-1.jpg/v4-460px-Make-Your-Nintendogs-Love-You-Step-1.jpg.webp',
+    title: 'puppy',
   },
   {
-    img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-    title: 'Burger',
+    img: 'https://64.media.tumblr.com/052541f1a63c4418960e74bbbfee2ff0/e6c39c8fbf40aefb-3b/s500x750/c0868d596b35399e4e405377129f4ad7ff033897.png',
+    title: 'puppy',
   },
   {
-    img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-    title: 'Camera',
+    img: 'https://www.wikihow.com/images/thumb/0/06/Play-Nintendogs-Step-5.jpg/v4-460px-Play-Nintendogs-Step-5.jpg',
+    title: 'puppy',
   },
   {
-    img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-    title: 'Coffee',
+    img: 'https://cdn.mos.cms.futurecdn.net/yYNQwwyeML2JC39Qe4iMzh.jpg',
+    title: 'puppy',
   },
 ];
 
